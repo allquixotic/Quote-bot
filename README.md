@@ -14,7 +14,7 @@ pip install discord.py
 ```
 2. Create a bot application [here](https://discordapp.com/developers/applications/) and get a discord token/secret key.
 
-4. Add your token/secret key where it says [token] at the bottom of the code.
+4. Create a file named config.vars and put the following line in it: `export DISCORD_SECRET=xxxx` where `xxxx` is your token/secret key.
 
 3. To add the bot to your server find your client ID from the page above and replace it in X's in the link below.
 ```
@@ -22,13 +22,13 @@ https://discordapp.com/oauth2/authorize?client_id=XXXXXXXXXXXXXXX&scope=bot
 ```
 5. Finally run:
 ```
-python quotebot.py
+./run.sh
 ```
 ## Commands
-!quote @[user] [message] - stores a quote by the user.  
-!getquote @[user] - gets a users quote.  
-!quotehelp - shows a list of commands and syntax.   
-!random - gets a random quote from a random user.
+%qsave [user] [message] - stores a quote by the user.  
+%getq [user] - gets a users quote.  
+%qhelp - shows a list of commands and syntax.   
+%qrand - gets a random quote from a random user.
 
 ## FAQ
 * The program has checks to stop people adding the same quote to a given person.
